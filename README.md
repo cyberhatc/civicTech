@@ -158,7 +158,7 @@ civicTech/
 │   │   ├── db/              SQLite layer + idempotent seeding
 │   │   ├── routers/         health, voice, chat, schemes, tickets, admin, whatsapp
 │   │   └── services/        llm, stt, tts, nlu, rag, orchestrator, analytics
-│   └── tests/               pytest suite (62 tests)
+│   └── tests/               pytest suite (67 tests)
 ├── frontend/                Vite + React 19 + TypeScript + Tailwind v4 PWA
 │   ├── public/              manifest, service worker, generated icons
 │   └── src/                 citizen app + officer dashboard
@@ -171,7 +171,7 @@ civicTech/
 ## Tests
 
 ```powershell
-.\.venv\Scripts\python.exe -m pytest backend\tests -q     # 62 unit + API tests
+.\.venv\Scripts\python.exe -m pytest backend\tests -q     # 67 unit + API tests
 .\.venv\Scripts\python.exe scripts\smoke.py                # 42 end-to-end checks
 cd frontend; npm run build                                  # typecheck + production build
 ```
