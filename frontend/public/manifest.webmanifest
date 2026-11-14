@@ -1,0 +1,40 @@
+{
+  "name": "जनवाणी यूपी | JanVaani UP",
+  "short_name": "जनवाणी UP",
+  "description": "बोलकर जानिए आपकी सरकारी योजना, आवेदन की स्थिति और शिकायत दर्ज कराइए — हिंदी, भोजपुरी और अवधी में।",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fafaf8",
+  "theme_color": "#0f766e",
+  "lang": "hi",
+  "dir": "ltr",
+  "categories": ["government", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "शिकायत दर्ज करें",
+      "short_name": "शिकायत",
+      "url": "/?tab=grievance"
+    },
+    {
+      "name": "योजनाएँ",
+      "short_name": "योजनाएँ",
+      "url": "/?tab=schemes"
+    }
+  ]
+}

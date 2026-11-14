@@ -1,0 +1,649 @@
+{
+  "citizens": [
+    {
+      "id": "CIT-0001",
+      "name": "Ramesh Kumar",
+      "name_hi": "रमेश कुमार",
+      "gender": "M",
+      "age": 47,
+      "aadhaar_last4": "4821",
+      "mobile": "9876543210",
+      "district": "Barabanki",
+      "block": "Tanda",
+      "village": "Bansipur",
+      "land_bigha": 2.0,
+      "occupation": "Farmer",
+      "social_category": "OBC",
+      "family_members": 5,
+      "income_monthly": 8000,
+      "language": "bho",
+      "applications": [
+        {
+          "id": "APP-0001-01",
+          "scheme_id": "pm-kisan",
+          "status": "INSTALLMENT_CREDITED",
+          "status_hi": "किस्त जमा",
+          "amount": 2000,
+          "reference": "PMK-UP-88213",
+          "last_updated": "2026-09-14",
+          "created_at": "2023-06-02",
+          "events": [
+            { "seq": 1, "date": "2023-06-02", "label": "Application Registered", "label_hi": "आवेदन दर्ज", "status": "SUCCESS" },
+            { "seq": 2, "date": "2023-07-20", "label": "e-KYC Completed", "label_hi": "ई-केवाईसी पूर्ण", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-07-01", "label": "18th Instalment Credited", "label_hi": "18वीं किस्त जमा", "status": "SUCCESS" },
+            { "seq": 4, "date": "2026-09-14", "label": "19th Instalment Credited", "label_hi": "19वीं किस्त जमा", "status": "SUCCESS" },
+            { "seq": 5, "date": "2026-12-01", "label": "20th Instalment Scheduled", "label_hi": "20वीं किस्त निर्धारित", "status": "PENDING" }
+          ]
+        },
+        {
+          "id": "APP-0001-02",
+          "scheme_id": "kcc",
+          "status": "ACTIVE",
+          "status_hi": "सक्रिय",
+          "amount": 100000,
+          "reference": "KCC-BBK-55120",
+          "last_updated": "2026-08-30",
+          "created_at": "2021-04-18",
+          "events": [
+            { "seq": 1, "date": "2021-04-18", "label": "KCC Issued", "label_hi": "केसीसी जारी", "status": "SUCCESS" },
+            { "seq": 2, "date": "2026-04-02", "label": "Limit Revised to Rs 1,00,000", "label_hi": "सीमा बढ़ाकर 1,00,000", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-08-30", "label": "Crop Loan Disbursed for Kharif", "label_hi": "खरीफ फसल ऋण जारी", "status": "SUCCESS" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0002",
+      "name": "Sunita Devi",
+      "name_hi": "सुनीता देवी",
+      "gender": "F",
+      "age": 62,
+      "aadhaar_last4": "1173",
+      "mobile": "9765432109",
+      "district": "Varanasi",
+      "block": "Kashi",
+      "village": "Bhaironpatti",
+      "land_bigha": 0.0,
+      "occupation": "Household worker",
+      "social_category": "SC",
+      "family_members": 3,
+      "income_monthly": 3500,
+      "language": "bho",
+      "applications": [
+        {
+          "id": "APP-0002-01",
+          "scheme_id": "mpy-pension",
+          "status": "PENSION_ACTIVE",
+          "status_hi": "पेंशन सक्रिय",
+          "amount": 2500,
+          "reference": "MPY-UP-33871",
+          "last_updated": "2026-10-01",
+          "created_at": "2024-02-11",
+          "events": [
+            { "seq": 1, "date": "2024-02-11", "label": "Application Submitted", "label_hi": "आवेदन जमा", "status": "SUCCESS" },
+            { "seq": 2, "date": "2024-04-03", "label": "Approved by District Social Welfare Officer", "label_hi": "जिला समाज कल्याण अधिकारी द्वारा स्वीकृत", "status": "SUCCESS" },
+            { "seq": 3, "date": "2024-05-01", "label": "First Pension Credited", "label_hi": "पहली पेंशन जमा", "status": "SUCCESS" },
+            { "seq": 4, "date": "2026-10-01", "label": "Pension of Rs 2,500 credited for October", "label_hi": "अक्टूबर की 2,500 रुपये पेंशन जमा", "status": "SUCCESS" }
+          ]
+        },
+        {
+          "id": "APP-0002-02",
+          "scheme_id": "nfsa-ration",
+          "status": "RATION_ACTIVE",
+          "status_hi": "राशन सक्रिय",
+          "amount": 0,
+          "reference": "RC-VNS-99201",
+          "last_updated": "2026-10-14",
+          "created_at": "2020-08-20",
+          "events": [
+            { "seq": 1, "date": "2020-08-20", "label": "Ration Card Issued (PH)", "label_hi": "राशन कार्ड जारी (PH)", "status": "SUCCESS" },
+            { "seq": 2, "date": "2026-10-14", "label": "42.5 kg foodgrains collected for October", "label_hi": "अक्टूबर हेतु 42.5 किलो अनाज प्राप्त", "status": "SUCCESS" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0003",
+      "name": "Mohit Verma",
+      "name_hi": "मोहित वर्मा",
+      "gender": "M",
+      "age": 31,
+      "aadhaar_last4": "9032",
+      "mobile": "9001122334",
+      "district": "Lucknow",
+      "block": "Malihabad",
+      "village": "Siswan",
+      "land_bigha": 1.5,
+      "occupation": "Farmer",
+      "social_category": "OBC",
+      "family_members": 4,
+      "income_monthly": 11000,
+      "language": "hin",
+      "applications": [
+        {
+          "id": "APP-0003-01",
+          "scheme_id": "pm-kisan",
+          "status": "INSTALLMENT_PENDING",
+          "status_hi": "किस्त लंबित",
+          "amount": 2000,
+          "reference": "PMK-UP-90517",
+          "last_updated": "2026-11-02",
+          "created_at": "2022-01-09",
+          "events": [
+            { "seq": 1, "date": "2022-01-09", "label": "Application Registered", "label_hi": "आवेदन दर्ज", "status": "SUCCESS" },
+            { "seq": 2, "date": "2022-02-14", "label": "e-KYC Completed", "label_hi": "ई-केवाईसी पूर्ण", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-07-01", "label": "18th Instalment Credited", "label_hi": "18वीं किस्त जमा", "status": "SUCCESS" },
+            { "seq": 4, "date": "2026-11-02", "label": "19th Instalment Under Verification (land record mismatch)", "label_hi": "19वीं किस्त सत्यापन में (भूमि रिकॉर्ड विसंगति)", "status": "PENDING" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0004",
+      "name": "Sita Yadav",
+      "name_hi": "सीता यादव",
+      "gender": "F",
+      "age": 28,
+      "aadhaar_last4": "5560",
+      "mobile": "9456789012",
+      "district": "Gorakhpur",
+      "block": "Gorakhpur North",
+      "village": "Shahpur",
+      "land_bigha": 0.0,
+      "occupation": "Housewife",
+      "social_category": "SC",
+      "family_members": 4,
+      "income_monthly": 0,
+      "language": "bho",
+      "applications": [
+        {
+          "id": "APP-0004-01",
+          "scheme_id": "kanya-sumangala",
+          "status": "PARTIAL_DISBURSED",
+          "status_hi": "आंशिक राशि जमा",
+          "amount": 5000,
+          "reference": "MKSY-UP-77203",
+          "last_updated": "2026-07-19",
+          "created_at": "2025-03-28",
+          "events": [
+            { "seq": 1, "date": "2025-03-28", "label": "Application Registered", "label_hi": "आवेदन दर्ज", "status": "SUCCESS" },
+            { "seq": 2, "date": "2025-04-10", "label": "Pre-delivery instalment of Rs 5,000 released", "label_hi": "प्रसव पूर्व 5,000 रुपये जारी", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-07-19", "label": "Balance Rs 20,000 released after full vaccination", "label_hi": "पूर्ण टीकाकरण के बाद शेष 20,000 रुपये जारी", "status": "SUCCESS" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0005",
+      "name": "Alok Kumar",
+      "name_hi": "अलोक कुमार",
+      "gender": "M",
+      "age": 39,
+      "aadhaar_last4": "7742",
+      "mobile": "9812345678",
+      "district": "Prayagraj",
+      "block": "Koraon",
+      "village": "Mauwa",
+      "land_bigha": 4.0,
+      "occupation": "Farmer",
+      "social_category": "General",
+      "family_members": 6,
+      "income_monthly": 14000,
+      "language": "hin",
+      "applications": [
+        {
+          "id": "APP-0005-01",
+          "scheme_id": "pm-awas-gramin",
+          "status": "UNDER_CONSTRUCTION",
+          "status_hi": "निर्माणाधीन",
+          "amount": 60000,
+          "reference": "PMAY-UP-41055",
+          "last_updated": "2026-10-25",
+          "created_at": "2024-09-05",
+          "events": [
+            { "seq": 1, "date": "2024-09-05", "label": "Awaas+ List Verified by Gram Sabha", "label_hi": "आवास+ सूची ग्राम सभा द्वारा सत्यापित", "status": "SUCCESS" },
+            { "seq": 2, "date": "2024-12-20", "label": "First instalment of Rs 40,000 released", "label_hi": "पहली किस्त 40,000 रुपये जारी", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-04-15", "label": "Second instalment of Rs 40,000 released", "label_hi": "दूसरी किस्त 40,000 रुपये जारी", "status": "SUCCESS" },
+            { "seq": 4, "date": "2026-10-25", "label": "Construction in progress, third instalment awaited", "label_hi": "निर्माण जारी, तीसरी किस्त प्रतीक्षा में", "status": "PENDING" }
+          ]
+        },
+        {
+          "id": "APP-0005-02",
+          "scheme_id": "pmfby",
+          "status": "CLAIM_APPROVED",
+          "status_hi": "दावा स्वीकृत",
+          "amount": 24500,
+          "reference": "PMFBY-UP-88271",
+          "last_updated": "2026-11-05",
+          "created_at": "2026-07-22",
+          "events": [
+            { "seq": 1, "date": "2026-07-22", "label": "Enrolled for Kharif crop insurance", "label_hi": "खरीफ फसल बीमा हेतु नामांकित", "status": "SUCCESS" },
+            { "seq": 2, "date": "2026-08-14", "label": "Crop loss reported due to waterlogging", "label_hi": "जलभराव से फसल नुकसान की सूचना", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-11-05", "label": "Claim of Rs 24,500 approved", "label_hi": "24,500 रुपये का दावा स्वीकृत", "status": "SUCCESS" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0006",
+      "name": "Kamla Devi",
+      "name_hi": "कमला देवी",
+      "gender": "F",
+      "age": 71,
+      "aadhaar_last4": "2288",
+      "mobile": "9696969696",
+      "district": "Agra",
+      "block": "Khandeshwar",
+      "village": "Nagla",
+      "land_bigha": 0.0,
+      "occupation": "Retired (Anganwadi)",
+      "social_category": "SC",
+      "family_members": 2,
+      "income_monthly": 2500,
+      "language": "awd",
+      "applications": [
+        {
+          "id": "APP-0006-01",
+          "scheme_id": "mpy-pension",
+          "status": "PENSION_ACTIVE",
+          "status_hi": "पेंशन सक्रिय",
+          "amount": 3000,
+          "reference": "MPY-UP-10428",
+          "last_updated": "2026-10-01",
+          "created_at": "2023-05-30",
+          "events": [
+            { "seq": 1, "date": "2023-05-30", "label": "Application Submitted", "label_hi": "आवेदन जमा", "status": "SUCCESS" },
+            { "seq": 2, "date": "2023-07-12", "label": "Approved - Destitute Woman Pension", "label_hi": "स्वीकृत - निराश्रित महिला पेंशन", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-10-01", "label": "Pension of Rs 3,000 credited for October", "label_hi": "अक्टूबर की 3,000 रुपये पेंशन जमा", "status": "SUCCESS" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0007",
+      "name": "Imran Khan",
+      "name_hi": "इमरान खान",
+      "gender": "M",
+      "age": 35,
+      "aadhaar_last4": "6614",
+      "mobile": "9988776655",
+      "district": "Kanpur Nagar",
+      "block": "Kalyanpur",
+      "village": "Rampur",
+      "land_bigha": 3.0,
+      "occupation": "Farmer",
+      "social_category": "OBC",
+      "family_members": 7,
+      "income_monthly": 9000,
+      "language": "bho",
+      "applications": [
+        {
+          "id": "APP-0007-01",
+          "scheme_id": "pm-kisan",
+          "status": "INSTALLMENT_CREDITED",
+          "status_hi": "किस्त जमा",
+          "amount": 2000,
+          "reference": "PMK-UP-77410",
+          "last_updated": "2026-09-14",
+          "created_at": "2022-11-14",
+          "events": [
+            { "seq": 1, "date": "2022-11-14", "label": "Application Registered", "label_hi": "आवेदन दर्ज", "status": "SUCCESS" },
+            { "seq": 2, "date": "2023-02-20", "label": "e-KYC Completed", "label_hi": "ई-केवाईसी पूर्ण", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-09-14", "label": "19th Instalment Credited", "label_hi": "19वीं किस्त जमा", "status": "SUCCESS" }
+          ]
+        },
+        {
+          "id": "APP-0007-02",
+          "scheme_id": "up-bhulekh",
+          "status": "RECORD_AVAILABLE",
+          "status_hi": "रिकॉर्ड उपलब्ध",
+          "amount": 0,
+          "reference": "KHAT-BK-44120",
+          "last_updated": "2026-11-09",
+          "created_at": "2026-11-09",
+          "events": [
+            { "seq": 1, "date": "2026-11-09", "label": "Khatauni downloaded for Jamabandi 44120", "label_hi": "जमाबंदी 44120 हेतु खतौनी डाउनलोड", "status": "SUCCESS" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0008",
+      "name": "Rekha Singh",
+      "name_hi": "रेखा सिंह",
+      "gender": "F",
+      "age": 44,
+      "aadhaar_last4": "3390",
+      "mobile": "9456123456",
+      "district": "Mathura",
+      "block": "Mathura Rural",
+      "village": "Chhota Nagla",
+      "land_bigha": 1.0,
+      "occupation": "Farmer",
+      "social_category": "OBC",
+      "family_members": 5,
+      "income_monthly": 7000,
+      "language": "awd",
+      "applications": [
+        {
+          "id": "APP-0008-01",
+          "scheme_id": "kanya-sumangala",
+          "status": "APPROVED_AWAITING_RELEASE",
+          "status_hi": "स्वीकृत, जारी होने की प्रतीक्षा में",
+          "amount": 20000,
+          "reference": "MKSY-UP-55902",
+          "last_updated": "2026-11-08",
+          "created_at": "2026-06-12",
+          "events": [
+            { "seq": 1, "date": "2026-06-12", "label": "Application Registered at Anganwadi Centre", "label_hi": "आंगनवाड़ी केंद्र पर आवेदन दर्ज", "status": "SUCCESS" },
+            { "seq": 2, "date": "2026-07-20", "label": "Birth certificate and Aadhaar verified", "label_hi": "जन्म प्रमाण पत्र और आधार सत्यापित", "status": "SUCCESS" },
+            { "seq": 3, "date": "2026-11-08", "label": "Approved, amount release initiated", "label_hi": "स्वीकृत, राशि जारी करने की प्रक्रिया में", "status": "PENDING" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0009",
+      "name": "Ganesh Prasad",
+      "name_hi": "गणेश प्रसाद",
+      "gender": "M",
+      "age": 58,
+      "aadhaar_last4": "8805",
+      "mobile": "9335678901",
+      "district": "Barabanki",
+      "block": "Tanda",
+      "village": "Bansipur",
+      "land_bigha": 5.5,
+      "occupation": "Farmer",
+      "social_category": "OBC",
+      "family_members": 8,
+      "income_monthly": 12000,
+      "language": "bho",
+      "applications": [
+        {
+          "id": "APP-0009-01",
+          "scheme_id": "kcc",
+          "status": "CREDIT_LIMIT_EXPIRED",
+          "status_hi": "क्रेडिट सीमा समाप्त",
+          "amount": 200000,
+          "reference": "KCC-BBK-55903",
+          "last_updated": "2025-11-30",
+          "created_at": "2020-06-15",
+          "events": [
+            { "seq": 1, "date": "2020-06-15", "label": "KCC Issued", "label_hi": "केसीसी जारी", "status": "SUCCESS" },
+            { "seq": 2, "date": "2024-03-10", "label": "Limit Revised to Rs 2,00,000", "label_hi": "सीमा बढ़ाकर 2,00,000", "status": "SUCCESS" },
+            { "seq": 3, "date": "2025-11-30", "label": "KCC validity period expired, renewal pending", "label_hi": "केसीसी की वैधता समाप्त, नवीनीकरण शेष", "status": "PENDING" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0010",
+      "name": "Nasim Ali",
+      "name_hi": "नसीम अली",
+      "gender": "M",
+      "age": 52,
+      "aadhaar_last4": "1127",
+      "mobile": "9773344556",
+      "district": "Varanasi",
+      "block": "Varas",
+      "village": "Kakaraha",
+      "land_bigha": 2.5,
+      "occupation": "Farmer",
+      "social_category": "Minority",
+      "family_members": 6,
+      "income_monthly": 9500,
+      "language": "bho",
+      "applications": [
+        {
+          "id": "APP-0010-01",
+          "scheme_id": "nfsa-ration",
+          "status": "RATION_ACTIVE",
+          "status_hi": "राशन सक्रिय",
+          "amount": 0,
+          "reference": "RC-VNS-88310",
+          "last_updated": "2026-10-14",
+          "created_at": "2019-05-02",
+          "events": [
+            { "seq": 1, "date": "2019-05-02", "label": "Ration Card Issued (AAY)", "label_hi": "राशन कार्ड जारी (AAY)", "status": "SUCCESS" },
+            { "seq": 2, "date": "2026-10-14", "label": "35 kg foodgrains collected for October", "label_hi": "अक्टूबर हेतु 35 किलो अनाज प्राप्त", "status": "SUCCESS" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0011",
+      "name": "Pooja Rani",
+      "name_hi": "पूजा रानी",
+      "gender": "F",
+      "age": 23,
+      "aadhaar_last4": "4439",
+      "mobile": "9654112233",
+      "district": "Lucknow",
+      "block": "Lucknow East",
+      "village": "Alambagh",
+      "land_bigha": 0.0,
+      "occupation": "Tailor (home-based)",
+      "social_category": "SC",
+      "family_members": 3,
+      "income_monthly": 6000,
+      "language": "hin",
+      "applications": [
+        {
+          "id": "APP-0011-01",
+          "scheme_id": "pm-awas-urban",
+          "status": "UNDER_VERIFICATION",
+          "status_hi": "सत्यापन में",
+          "amount": 120000,
+          "reference": "PMAYU-UP-70012",
+          "last_updated": "2026-11-11",
+          "created_at": "2026-10-28",
+          "events": [
+            { "seq": 1, "date": "2026-10-28", "label": "Application Submitted at e-Muncipal Nagrik Seva Kendra", "label_hi": "ई-मunicipal नागरिक सेवा केंद्र पर आवेदन जमा", "status": "SUCCESS" },
+            { "seq": 2, "date": "2026-11-11", "label": "Awaas+ survey verification in progress", "label_hi": "आवास+ सर्वेक्षण सत्यापन जारी", "status": "PENDING" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CIT-0012",
+      "name": "Bhagwan Das",
+      "name_hi": "भगवान दास",
+      "gender": "M",
+      "age": 67,
+      "aadhaar_last4": "9951",
+      "mobile": "9810001122",
+      "district": "Gorakhpur",
+      "block": "Sahajanwa",
+      "village": "Devaria",
+      "land_bigha": 1.25,
+      "occupation": "Farmer",
+      "social_category": "SC",
+      "family_members": 3,
+      "income_monthly": 4500,
+      "language": "bho",
+      "applications": [
+        {
+          "id": "APP-0012-01",
+          "scheme_id": "mpy-pension",
+          "status": "APPLICATION_UNDER_REVIEW",
+          "status_hi": "आवेदन की समीक्षा में",
+          "amount": 2500,
+          "reference": "MPY-UP-66201",
+          "last_updated": "2026-10-22",
+          "created_at": "2026-09-30",
+          "events": [
+            { "seq": 1, "date": "2026-09-30", "label": "Application Submitted at Tehsil Social Welfare Office", "label_hi": "तहसील सामाजिक कल्याण कार्यालय में आवेदन जमा", "status": "SUCCESS" },
+            { "seq": 2, "date": "2026-10-22", "label": "Income certificate under verification", "label_hi": "आय प्रमाण पत्र सत्यापन में", "status": "PENDING" }
+          ]
+        },
+        {
+          "id": "APP-0012-02",
+          "scheme_id": "nfsa-ration",
+          "status": "RATION_ACTIVE",
+          "status_hi": "राशन सक्रिय",
+          "amount": 0,
+          "reference": "RC-GKP-11470",
+          "last_updated": "2026-10-14",
+          "created_at": "2017-01-22",
+          "events": [
+            { "seq": 1, "date": "2017-01-22", "label": "Ration Card Issued (PH)", "label_hi": "राशन कार्ड जारी (PH)", "status": "SUCCESS" },
+            { "seq": 2, "date": "2026-10-14", "label": "15 kg foodgrains collected for October", "label_hi": "अक्टूबर हेतु 15 किलो अनाज प्राप्त", "status": "SUCCESS" }
+          ]
+        }
+      ]
+    }
+  ],
+  "grievances": [
+    {
+      "id": "JVUP-2026-0001",
+      "citizen_name": "Ramesh Kumar",
+      "contact": "9876543210",
+      "category": "electricity",
+      "category_hi": "बिजली",
+      "issue": "Village transformer burnt out for 4 days, no restoration and no one from the department is responding to calls.",
+      "district": "Barabanki",
+      "block": "Tanda",
+      "village": "Bansipur",
+      "duration_days": 4,
+      "urgency": "high",
+      "sentiment": "negative",
+      "status": "IN_PROGRESS",
+      "priority": "P1",
+      "assigned_to": "A. K. Srivastava, SDO Tanda",
+      "summary": "ग्राम बंसीपुर, तहसील टंडा, जिला बाराबंकी के 6 घरों के ट्रांसफॉर्मर में आग लगने के बाद 4 दिन से बिजली बंद है। निकटतम पोल से तार जल गया है। विद्युत विभाग के कर्मचारियों के नंबर पर कॉल करने पर कोई जवाब नहीं मिला। निवारण हेतु शीघ्र कार्रवाई अनुरोध है।",
+      "summary_en": "The transformer serving 6 households in Bansipur village, Tanda, Barabanki has been burnt for 4 days and supply has not been restored. The nearest pole has also been damaged. Repeated calls to the electricity department helpline went unanswered. Immediate restoration is requested.",
+      "transcript": "Hamare gaon ke transformer 4 din se jala pada hai, koi sun nahi raha.",
+      "language": "bho",
+      "channel": "voice",
+      "created_at": "2026-11-13T09:12:00+00:00",
+      "notes": [
+        { "note": "SDO Tanda informed. Transformer team dispatched with 4 poles for restoration.", "author": "A. K. Srivastava", "created_at": "2026-11-13T12:40:00+00:00" }
+      ]
+    },
+    {
+      "id": "JVUP-2026-0002",
+      "citizen_name": "Sita Yadav",
+      "contact": "9456789012",
+      "category": "water",
+      "category_hi": "पानी",
+      "issue": "Hand pump in the village has been dry for 2 weeks and there is no tanker supply either.",
+      "district": "Gorakhpur",
+      "block": "Gorakhpur North",
+      "village": "Shahpur",
+      "duration_days": 14,
+      "urgency": "high",
+      "sentiment": "negative",
+      "status": "NEW",
+      "priority": "P1",
+      "assigned_to": null,
+      "summary": "ग्राम शाहपुर, वार्ड नंबर 3 में सार्वजनिक हेड पंप 2 सप्ताह से सूखा है। चारों ओर पानी की लाइन नहीं है और न ही टैंकर से आपूर्ति हो रही है। महिलाओं और बच्चों को दूर के कुएँ से पानी लाना पड़ रहा है।",
+      "summary_en": "The public hand pump in ward 3 of Shahpur village has been dry for two weeks. There is no piped supply and no tanker arrangement either. Women and children are forced to fetch water from distant wells.",
+      "transcript": "Hamare gaon ka hand pump bahut din se suk gaya hai, paani nahi aa raha, tanker bhi nahi aata.",
+      "language": "bho",
+      "channel": "voice",
+      "created_at": "2026-11-14T07:45:00+00:00",
+      "notes": []
+    },
+    {
+      "id": "JVUP-2026-0003",
+      "citizen_name": "Imran Khan",
+      "contact": "9988776655",
+      "category": "roads",
+      "category_hi": "सड़क",
+      "issue": "The link road to the market has been washed away after the rains and heavy vehicles are stuck.",
+      "district": "Kanpur Nagar",
+      "block": "Kalyanpur",
+      "village": "Rampur",
+      "duration_days": 10,
+      "urgency": "medium",
+      "sentiment": "neutral",
+      "status": "NEW",
+      "priority": "P2",
+      "assigned_to": null,
+      "summary": "ग्राम रामपुर, जिला कानपुर नगर का बाजार जाने वाला सड़क बारिश में बह गया है। कृषि उपज ढुलाई के लिए भारी वाहन फंस रहे हैं और किसानों को 8 किलोमीटर घूमकर जाना पड़ रहा है।",
+      "summary_en": "The market link road of Rampur village, Kanpur Nagar, has been washed away in the rains. Heavy vehicles carrying farm produce are stranded and farmers must detour by 8 km.",
+      "transcript": "Bazaar jaane wala sadak baarish mein bigad gaya hai, gadda nahi hai.",
+      "language": "bho",
+      "channel": "voice",
+      "created_at": "2026-11-14T06:20:00+00:00",
+      "notes": []
+    },
+    {
+      "id": "JVUP-2026-0004",
+      "citizen_name": "Kamla Devi",
+      "contact": "9696969696",
+      "category": "health",
+      "category_hi": "स्वास्थ्य",
+      "issue": "Primary Health Centre has no doctor for a month and the ANM is also absent.",
+      "district": "Agra",
+      "block": "Khandeshwar",
+      "village": "Nagla",
+      "duration_days": 30,
+      "urgency": "high",
+      "sentiment": "negative",
+      "status": "IN_PROGRESS",
+      "priority": "P1",
+      "assigned_to": "Dr. S. Mishra, CMO Agra",
+      "summary": "ग्राम नागला, प्राथमिक स्वास्थ्य केंद्र में 1 माह से चिकित्सक उपलब्ध नहीं हैं और ANM भी अनुपस्थित है। गंभीर रोगियों को बरखा सड़क से जाना पड़ता है। तत्काल चिकित्सक की नियुक्ति अनुरोध है।",
+      "summary_en": "The Primary Health Centre at Nagla village has had no doctor for a month and the ANM is also absent. Serious patients are being carried along the main road. Immediate posting of a doctor is requested.",
+      "transcript": "Primary Health Center me doctor nahi hai, ek mahina se, bimari me koi nahi dekhta.",
+      "language": "awd",
+      "channel": "voice",
+      "created_at": "2026-11-12T11:05:00+00:00",
+      "notes": [
+        { "note": "Locum doctor arranged, posting orders issued to the district hospital.", "author": "Dr. S. Mishra", "created_at": "2026-11-13T09:30:00+00:00" }
+      ]
+    },
+    {
+      "id": "JVUP-2026-0005",
+      "citizen_name": "Bhagwan Das",
+      "contact": "9810001122",
+      "category": "sanitation",
+      "category_hi": "स्वच्छता",
+      "issue": "Garbage is not being collected in the village for 5 days and the drain is overflowing.",
+      "district": "Gorakhpur",
+      "block": "Sahajanwa",
+      "village": "Devaria",
+      "duration_days": 5,
+      "urgency": "medium",
+      "sentiment": "negative",
+      "status": "RESOLVED",
+      "priority": "P3",
+      "assigned_to": "R. Prasad, Pradhan",
+      "summary": "ग्राम देवारिया में 5 दिन से कचरा संग्रहण नहीं हो रहा है और गांधी नाली भर गई है। नाली सफाई एवं कचरा पिकअप की व्यवस्था हेतु अनुरोध।",
+      "summary_en": "Garbage collection has stopped in Devaria village for five days and the Gandhi drain has overflowed. Request for drain cleaning and waste pickup arrangements.",
+      "transcript": "Kachra 5 din se nahi uthaya gaya, nali jhar gayi hai.",
+      "language": "bho",
+      "channel": "voice",
+      "created_at": "2026-11-08T05:30:00+00:00",
+      "notes": [
+        { "note": "Sanitation vehicle sent, drain desilted. Resolved.", "author": "R. Prasad", "created_at": "2026-11-10T10:00:00+00:00" }
+      ]
+    },
+    {
+      "id": "JVUP-2026-0006",
+      "citizen_name": "Rekha Singh",
+      "contact": "9456123456",
+      "category": "education",
+      "category_hi": "शिक्षा",
+      "issue": "School teacher has not attended school for 6 days and the mid-day meal has also stopped.",
+      "district": "Mathura",
+      "block": "Mathura Rural",
+      "village": "Chhota Nagla",
+      "duration_days": 6,
+      "urgency": "medium",
+      "sentiment": "neutral",
+      "status": "NEW",
+      "priority": "P2",
+      "assigned_to": null,
+      "summary": "ग्राम छोटा नंगला के प्राथमिक विद्यालय में 6 दिन से शिक्षक नहीं आए हैं और मध्याह्न भोजन भी बंद है। बच्चों की पढ़ाई प्रभावित हो रही है।",
+      "summary_en": "The primary school at Chhota Nagla village has had no teacher for six days and the mid-day meal has also stopped. Studies of the children are being affected.",
+      "transcript": "School ke teacher 6 din se nahi aaye, khana bhi nahi milta bacchon ko.",
+      "language": "awd",
+      "channel": "voice",
+      "created_at": "2026-11-14T04:55:00+00:00",
+      "notes": []
+    }
+  ]
+}

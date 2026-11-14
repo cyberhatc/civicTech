@@ -1,0 +1,24 @@
+# ---------------------------------------------------------------------------
+# JanVaani UP - backend dependencies
+# Install with:  py -m pip install -r backend/requirements.txt
+# ---------------------------------------------------------------------------
+
+# --- Web framework ---------------------------------------------------------
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pydantic==2.10.4
+pydantic-settings==2.7.0
+
+# --- HTTP client (Groq / Bhashini) ----------------------------------------
+httpx==0.28.1
+
+# --- Text to speech --------------------------------------------------------
+edge-tts==7.0.0
+
+# --- Testing ---------------------------------------------------------------
+pytest==8.3.4
+pytest-asyncio==0.25.0
+
+# --- Optional: ChromaDB vector backend (VECTOR_BACKEND=chroma) ------------
+# chromadb==0.5.23

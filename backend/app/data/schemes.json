@@ -1,0 +1,568 @@
+[
+  {
+    "id": "pm-kisan",
+    "name": "PM-KISAN Samman Nidhi",
+    "name_hi": "प्रधानमंत्री किसान सम्मान निधि",
+    "short_name": "PM-KISAN",
+    "category": "agriculture",
+    "category_hi": "कृषि",
+    "authority": "Central Government (Ministry of Agriculture)",
+    "state": "All India, including Uttar Pradesh",
+    "launched": "2019",
+    "summary": "Income support of Rs 6,000 per year to landholding farmer families, paid in three equal instalments of Rs 2,000 directly into the bank account linked with Aadhaar.",
+    "summary_hi": "जमीन वाले किसान परिवारों को हर साल 6,000 रुपये की आय सहायता, 2,000-2,000-2,000 के तीन किस्तों में सीधे आधार से जुड़े बैंक खाते में।",
+    "amount": "Rs 6,000 per year (3 instalments of Rs 2,000)",
+    "amounts": ["2000", "6000"],
+    "icon": "🌾",
+    "tags": ["kisan", "zameen", "land", "bigha", "bighai", "cultivation", "fasal", "khet", "pmkisan", "kisan samman"],
+    "sections": [
+      {
+        "id": "pm-kisan.eligibility",
+        "title": "Eligibility Criteria",
+        "title_hi": "पात्रता मानदंड",
+        "body": "All landholding farmer families are eligible. A family means husband, wife and minor children holding cultivable land in their name. The applicant must be an Indian citizen, resident of India, between 18 and 70 years of age, and have a savings bank or current account linked to Aadhaar, PAN and mobile number.",
+        "body_hi": "सभी जमीन वाले किसान परिवार पात्र हैं। परिवार का अर्थ पति, पत्नी और नाबालिग बच्चे हैं जिनके नाम जोतदार जमीन है। आवेदक भारतीय नागरिक हो, 18 से 70 वर्ष के बीच हो, और आधार, पैन तथा मोबाइल से जुड़ा बैंक खाता हो।",
+        "eligibility": [
+          "Landholding farmer family with cultivable land in the applicant's name",
+          "Indian citizen resident in India, age between 18 and 70 years",
+          "Aadhaar-linked savings bank or current account, with PAN and mobile number",
+          "Land record in the name of the applicant (or family member) as per Khatauni",
+          "Not an income-tax payer in the last assessment year"
+        ],
+        "eligibility_hi": [
+          "आवेदक के नाम जोतदार जमीन वाला किसान परिवार",
+          "भारतीय नागरिक, 18 से 70 वर्ष की आयु",
+          "आधार से जुड़ा बैंक खाता, पैन और मोबाइल नंबर",
+          "खतौनी के अनुसार आवेदक या परिवार के सदस्य के नाम जमीन",
+          "पिछले वर्ष आयकर न दायी हो"
+        ],
+        "documents": [
+          "Aadhaar card (mandatory, e-KYC required)",
+          "Land holding record / Khasra-Khatauni (छह-सीढ़ी चौहद्दी पंजी)",
+          "Bank passbook linked with Aadhaar",
+          "Mobile number (OTP verification)",
+          "Citizenship certificate"
+        ],
+        "documents_hi": [
+          "आधार कार्ड (अनिवार्य, ई-केवाईसी जरूरी)",
+          "जमीन रिकॉर्ड / खसरा-खतौनी (छह-सीढ़ी चौहद्दी पंजी)",
+          "आधार से जुड़ा बैंक पासबुक",
+          "मोबाइल नंबर (ओटीपी सत्यापन)",
+          "नागरिकता प्रमाण पत्र"
+        ],
+        "source": "pmkisan.gov.in",
+        "page": 2
+      },
+      {
+        "id": "pm-kisan.application",
+        "title": "How to Apply and Track",
+        "title_hi": "आवेदन और स्थिति कैसे जानें",
+        "body": "Applications are made free of cost at Common Service Centres (CSC) or the local Patwari / Lekhpal office, or self-registered online at pmkisan.gov.in under 'New Farmer Registration'. e-KYC is mandatory. Instalment status can be checked on pmkisan.gov.in under 'Know Your Status' using the registration number or mobile number.",
+        "body_hi": "आवेदन सीएससी, कलेक्टर/लेखपाल कार्यालय या pmkisan.gov.in पर 'New Farmer Registration' के तहत मुफ़्त कर सकते हैं। ई-केवाईसी अनिवार्य है। किस्त की स्थिति pmkisan.gov.in पर 'Know Your Status' से जानें।",
+        "source": "pmkisan.gov.in",
+        "page": 4
+      },
+      {
+        "id": "pm-kisan.exclusions",
+        "title": "Who Is Not Eligible",
+        "title_hi": "कौन पात्र नहीं है",
+        "body": "Institutional landholders, serving or retired government employees above Group D, constitutional posts, professionals such as doctors, engineers, lawyers and chartered accountants, and any person who paid income tax in the last assessment year are not eligible.",
+        "body_hi": "संस्थागत भू-धारक, सेवा/सेवानिवृत्त सरकारी कर्मचारी (ग्रुप डी से ऊपर), संवैधानिक पद, डॉक्टर-इंजीनियर-वकील जैसे पेशेवर, और जिन्होंने पिछले वर्ष आयकर दिया हो, वे पात्र नहीं हैं।",
+        "source": "pmkisan.gov.in",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "kcc",
+    "name": "Kisan Credit Card",
+    "name_hi": "किसान क्रेडिट कार्ड",
+    "short_name": "KCC",
+    "category": "agriculture",
+    "category_hi": "कृषि",
+    "authority": "NABARD / State Cooperative Banks",
+    "state": "All India, including Uttar Pradesh",
+    "launched": "1998",
+    "summary": "Short-term crop loan up to Rs 3 lakh at 4% effective interest with prompt repayment incentive of 3%, and collateral-free credit up to Rs 2 lakh for landholding animal husbandry and fisheries farmers.",
+    "summary_hi": "फसल की अल्पकालिक ऋण 3 लाख रुपये तक, प्रभावी ब्याज 4 प्रतिशत और समय पर भुगतान पर 3 प्रतिशत छूट; पशुपालन व मत्स्य पालक किसानों को 2 लाख तक बिना गारंटी ऋण।",
+    "amount": "Credit limit up to Rs 3,00,000; interest 4% per year with 3% prompt repayment incentive",
+    "amounts": ["300000", "200000", "4", "3"],
+    "icon": "💳",
+    "tags": ["kisan", "kcc", "loan", "udhaar", "credit card", "interest", "khet", "zameen"],
+    "sections": [
+      {
+        "id": "kcc.eligibility",
+        "title": "Eligibility Criteria",
+        "title_hi": "पात्रता मानदंड",
+        "body": "Owner cultivators, tenant farmers, oral lessees and share croppers who are engaged in animal husbandry and fisheries are eligible. The applicant must be 18 to 75 years old, a resident of India, and a part of a village economy unit. Under the 2023 expansion, a farmer with a Kisan Credit Card can also cover animal husbandry and fisheries activities.",
+        "body_hi": "स्वामी कृषि करने वाले, काश्तकार, मौखिक पट्टेदार और बटाईदार, तथा पशुपालन व मत्स्य पालन में लगे किसान पात्र हैं। आवेदक 18 से 75 वर्ष का भारतीय निवासी हो। 2023 के विस्तार के बाद पशुपालन और मत्स्य पालन भी कवरेज में आ गया है।",
+        "eligibility": [
+          "Owner cultivator, tenant farmer, oral lessee or share cropper",
+          "Engaged in animal husbandry and fisheries also qualifies",
+          "Age between 18 and 75 years, resident of India",
+          "A member of the village economy unit with a viable agricultural activity"
+        ],
+        "eligibility_hi": [
+          "स्वामी कृषक, काश्तकार, मौखिक पट्टेदार या बटाईदार",
+          "पशुपालन और मत्स्य पालन में लगे किसान भी पात्र",
+          "18 से 75 वर्ष की आयु, भारत का निवासी",
+          "कृषि गतिविधि वाले ग्राम अर्थव्यवस्था इकाई का सदस्य"
+        ],
+        "documents": [
+          "Aadhaar card and PAN card",
+          "Two passport-size photographs",
+          "Land records / Khasra-Khatauni",
+          "Bank account passbook",
+          "Aquaculture lease documents (if fisheries)"
+        ],
+        "documents_hi": [
+          "आधार कार्ड और पैन कार्ड",
+          "दो पासपोर्ट साइज फोटोग्राफ",
+          "भूमि रिकॉर्ड / खसरा-खतौनी",
+          "बैंक खाता पासबुक",
+          "मत्स्य पालन लीज दस्तावेज़ (यदि मछली पालन हो)"
+        ],
+        "source": "www.nabard.org",
+        "page": 5
+      },
+      {
+        "id": "kcc.interest",
+        "title": "Interest and Repayment",
+        "title_hi": "ब्याज और वापसी",
+        "body": "Standard short-term crop loan of up to Rs 3 lakh carries an effective interest rate of 4% per year for all farmers. Timely repayment of the entire amount on or before the due date earns a 3% prompt repayment incentive, making the net effective rate 1.5% in the short-term credit regime. The credit limit is valid for 5 years and is reviewed annually.",
+        "body_hi": "3 लाख तक के अल्पकालिक फसल ऋण पर 4 प्रतिशत प्रभावी ब्याज दर सभी किसानों के लिए। समय पर पूरी वापसी पर 3 प्रतिशत छूट, जिससे शुद्ध दर 1.5 प्रतिशत हो जाती है। क्रेडिट सीमा 5 वर्ष के लिए वैध है, हर साल समीक्षा होती है।",
+        "source": "www.nabard.org",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "pm-awas-gramin",
+    "name": "PM Awas Yojana - Gramin",
+    "name_hi": "प्रधानमंत्री आवास योजना - ग्रामीण",
+    "short_name": "PM Awas Gramin",
+    "category": "housing",
+    "category_hi": "आवास",
+    "authority": "Ministry of Rural Development, Government of India",
+    "state": "Uttar Pradesh",
+    "launched": "2015",
+    "summary": "Assistance of Rs 1.20 lakh for a pucca house in plain areas and Rs 1.30 lakh in hilly or difficult areas, with 90-95 days of unskilled wage employment under MGNREGA, plus a free toilet under SBM-G and LPG connection under Ujjwala.",
+    "summary_hi": "मैदानी क्षेत्र में पक्का घर बनाने के लिए 1.20 लाख रुपये और पहाड़ी/कठिन क्षेत्र में 1.30 लाख रुपये, मनरेगा से 90-95 दिन मज़दूरी, शौचालय और एलपीजी कनेक्शन।",
+    "amount": "Rs 1,20,000 unit assistance (plain) / Rs 1,30,000 (hilly and difficult areas)",
+    "amounts": ["120000", "130000", "90", "95"],
+    "icon": "🏠",
+    "tags": ["awas", "ghar", "house", "makan", "ghar banana", "shtina", "rural housing", "housingo"],
+    "sections": [
+      {
+        "id": "pm-awas-gramin.eligibility",
+        "title": "Eligibility Criteria",
+        "title_hi": "पात्रता मानदंड",
+        "body": "Families living in kutcha or dilapidated houses in rural areas are eligible. The family must not own a pucca house anywhere in India, must have an Aadhaar-linked bank account in the name of a woman of the family (preferably the woman herself as the beneficiary), and must be listed in the Awaas+ 2024 housing list verified by the Gram Sabha.",
+        "body_hi": "ग्रामीण क्षेत्र में कच्चे या जीर्ण-शीर्ण घरों में रहने वाले परिवार पात्र हैं। भारत में कहीं भी पक्का घर न हो, परिवार की महिला के नाम आधार से जुड़ा बैंक खाता हो, और ग्राम सभा द्वारा सत्यापित Awaas+ 2024 सूची में नाम हो।",
+        "eligibility": [
+          "Family residing in a kutcha or dilapidated rural house",
+          "No pucca house owned by any family member in India",
+          "Awaas+ 2024 list verified through Gram Sabha",
+          "Bank account in the name of a woman of the family",
+          "Aadhaar, ration card and job card available for verification"
+        ],
+        "eligibility_hi": [
+          "कच्चे या जीर्ण-शीर्ण ग्रामीण घर में रहने वाला परिवार",
+          "भारत में किसी भी सदस्य का पक्का घर नहीं",
+          "ग्राम सभा द्वारा सत्यापित Awaas+ 2024 सूची में नाम",
+          "परिवार की महिला के नाम बैंक खाता",
+          "सत्यापन हेतु आधार, राशन कार्ड और जॉब कार्ड उपलब्ध"
+        ],
+        "documents": [
+          "Aadhaar card of all family members",
+          "Ration card",
+          "Bank passbook with IFSC (in woman's name)",
+          "MGNREGA job card",
+          "Gram Sabha verification / Awаas+ list entry",
+          "SBM-G number for toilet benefit"
+        ],
+        "documents_hi": [
+          "परिवार के सभी सदस्यों के आधार कार्ड",
+          "राशन कार्ड",
+          "महिला के नाम बैंक पासबुक व आईएफएससी",
+          "मनरेगा जॉब कार्ड",
+          "ग्राम सभा सत्यापन / आवास+ सूची प्रविष्टि",
+          "शौचालय लाभ हेतु SBM-G नंबर"
+        ],
+        "source": "pmayg.nic.in",
+        "page": 3
+      },
+      {
+        "id": "pm-awas-gramin.benefits",
+        "title": "Assistance and Convergences",
+        "title_hi": "सहायता और अन्य योजनाएँ",
+        "body": "Assistance is Rs 1.20 lakh in plain areas and Rs 1.30 lakh in hilly, north-eastern and difficult areas, released in instalments linked to construction milestones. The house must be completed within 90 days of the first instalment. The beneficiary also gets 90-95 days of unskilled work under MGNREGA, a toilet under SBM-G, an LPG connection under Ujjwala, and a solar roof top of 300 watt under the National Solar Mission.",
+        "body_hi": "सहायता मैदानी क्षेत्र में 1.20 लाख और पहाड़ी/दुर्गम क्षेत्र में 1.30 लाख रुपये, निर्माण की प्रगति से जुड़ी किस्तों में मिलती है। पहली किस्त के 90 दिन में घर पूरा होना चाहिए। मनरेगा में 90-95 दिन मज़दूरी, SBM-G से शौचालय, उज्ज्वला से एलपीजी, और 300 वाट सोलर छत मिलती है।",
+        "source": "pmayg.nic.in",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "pm-awas-urban",
+    "name": "PM Awas Yojana - Urban 2.0",
+    "name_hi": "प्रधानमंत्री आवास योजना - शहरी 2.0",
+    "short_name": "PMAY-U 2.0",
+    "category": "housing",
+    "category_hi": "आवास",
+    "authority": "Ministry of Housing and Urban Affairs",
+    "state": "Uttar Pradesh (urban)",
+    "launched": "2024",
+    "summary": "Beneficiary-led construction support of Rs 1.20 lakh for a pucca house, Rs 1 lakh for a beneficiary-led house, or Rs 50,000 for an Affordable Rental Housing house, with interest subsidy of up to Rs 1.80 lakh on a home loan of up to Rs 25 lakh.",
+    "summary_hi": "पूर्व-निर्मित घर के लिए 1.20 लाख, स्व-निर्मित (बेनीफिशियरी लेड) घर के लिए 1 लाख, और किफायती किराया आवास के लिए 50,000 रुपये सहायता; 25 लाख तक के होम लोन पर 1.80 लाख तक ब्याज छूट।",
+    "amount": "Rs 1,20,000 (beneficiary-led pucca) / Rs 1,00,000 (beneficiary-led house) / Rs 50,000 (ARH) + interest subsidy up to Rs 1,80,000",
+    "amounts": ["120000", "100000", "50000", "180000", "250000"],
+    "icon": "🏙️",
+    "tags": ["awas", "urban", "shahari", "ghar", "makan", "house", "rent", "kiraye"],
+    "sections": [
+      {
+        "id": "pm-awas-urban.eligibility",
+        "title": "Eligibility Criteria",
+        "title_hi": "पात्रता मानदंड",
+        "body": "Urban poor families without a pucca house anywhere in India are eligible, prioritised through Awaas+ survey 2024. Families living in informal settlements, EWS/LIG/MIG beneficiary households under PMAY-U 1.0, or central government sanctioned employees with no house are covered.",
+        "body_hi": "भारत में कहीं भी पक्का घर न होने वाले शहरी गरीब परिवार पात्र हैं, प्राथमिकता Awaas+ सर्वेक्षण 2024 से होती है। अनौपचारिक बस्तियों में रहने वाले, PMAY-U 1.0 के EWS/LIG/MIG लाभार्थी, या बिना घर वाले केंद्रीय सरकार कर्मचारी शामिल हैं।",
+        "eligibility": [
+          "No pucca house owned by the family in India",
+          "Listed in Awaas+ 2024 urban survey",
+          "Income below the prescribed EWS/LIG/MIG ceiling",
+          "Beneficiary family, as notified by the local urban body"
+        ],
+        "eligibility_hi": [
+          "परिवार का भारत में कोई पक्का घर नहीं",
+          "Awaas+ 2024 शहरी सर्वेक्षण में सूचीबद्ध",
+          "निर्धारित EWS/LIG/MIG सीमा से कम आय",
+          "स्थानीय शहरी निकाय द्वारा अधिसूचित लाभार्थी परिवार"
+        ],
+        "documents": [
+          "Aadhaar card of the beneficiary and family",
+          "Income certificate or BPL card",
+          "Bank passbook linked to Aadhaar",
+          "Property/land documents (if any)",
+          "Awaas+ urban survey reference"
+        ],
+        "documents_hi": [
+          "लाभार्थी और परिवार के आधार कार्ड",
+          "आय प्रमाण पत्र या बीपीएल कार्ड",
+          "आधार से जुड़ा बैंक पासबुक",
+          "संपत्ति/भूमि दस्तावेज़ (यदि हों)",
+          "Awaas+ शहरी सर्वेक्षण संदर्भ"
+        ],
+        "source": "pmay-urban.gov.in",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "kanya-sumangala",
+    "name": "Mukhyamantri Kanya Sumangala Yojana",
+    "name_hi": "मुख्यमंत्री कन्या सुमंगला योजना",
+    "short_name": "MKSY",
+    "category": "women-child",
+    "category_hi": "महिला-बाल विकास",
+    "authority": "Government of Uttar Pradesh",
+    "state": "Uttar Pradesh",
+    "launched": "2019",
+    "summary": "Financial assistance of Rs 25,000 for the birth of a girl child, divided into Rs 5,000 before delivery and Rs 20,000 after the child's vaccination cycle is completed, with Rs 2,000 per year for food and nutrition while the girl is in school.",
+    "summary_hi": "बालिका के जन्म पर 25,000 रुपये की सहायता - प्रसव से पहले 5,000 और टीकाकरण पूरा होने पर 20,000 रुपये; स्कूल में रहने तक हर साल 2,000 रुपये भोजन एवं पोषण हेतु।",
+    "amount": "Rs 25,000 total: Rs 5,000 pre-delivery + Rs 20,000 post-vaccination; Rs 2,000 per year while in school",
+    "amounts": ["25000", "5000", "20000", "2000"],
+    "icon": "👧",
+    "tags": ["kanya", "ladki", "girl child", "beti", "suman", "sumngala", "kanya sumangala", "balika"],
+    "sections": [
+      {
+        "id": "kanya-sumangala.eligibility",
+        "title": "Eligibility Criteria",
+        "title_hi": "पात्रता मानदंड",
+        "body": "A girl child born in Uttar Pradesh in a family with annual income below Rs 3 lakh is eligible. The applicant must be the mother or father of the girl child, and must hold a ration card. The benefit applies once per girl child and the first applicant for the first delivery is preferred. After the birth, the beneficiary mother must get the child vaccinated under the full immunisation schedule.",
+        "body_hi": "उत्तर प्रदेश में जन्मी बालिका, जिसके परिवार की वार्षिक आय 3 लाख रुपये से कम हो, पात्र है। आवेदक बालिका की माता या पिता हो और राशन कार्ड धारक हो। यह लाभ प्रति बालिका एक बार मिलता है। जन्म के बाद शिशु का पूर्ण टीकाकरण आवश्यक है।",
+        "eligibility": [
+          "Girl child born in Uttar Pradesh",
+          "Family annual income below Rs 3 lakh",
+          "Applicant is the mother or father with a ration card",
+          "Benefit available once per girl child",
+          "Child must be vaccinated as per the full immunisation schedule"
+        ],
+        "eligibility_hi": [
+          "उत्तर प्रदेश में जन्मी बालिका",
+          "परिवार की वार्षिक आय 3 लाख रुपये से कम",
+          "आवेदक माता या पिता जो राशन कार्ड धारक हों",
+          "प्रति बालिका एक बार लाभ",
+          "शिशु का पूर्ण टीकाकरण आवश्यक"
+        ],
+        "documents": [
+          "Birth certificate (issued by the hospital / municipal corporation)",
+          "Aadhaar card of the mother and father",
+          "Ration card",
+          "Bank passbook linked with Aadhaar",
+          "Marriage certificate",
+          "Immunisation card"
+        ],
+        "documents_hi": [
+          "जन्म प्रमाण पत्र (अस्पताल/नगर निगम से)",
+          "माता-पिता के आधार कार्ड",
+          "राशन कार्ड",
+          "आधार से जुड़ा बैंक पासबुक",
+          "विवाह प्रमाण पत्र",
+          "टीकाकरण कार्ड"
+        ],
+        "source": "mksy.up.gov.in",
+        "page": 2
+      },
+      {
+        "id": "kanya-sumangala.process",
+        "title": "Application Process",
+        "title_hi": "आवेदन प्रक्रिया",
+        "body": "Applications are made at the Anganwadi Centre or the Block Development Officer office with the District Magistrate's approval, or online at mksy.up.gov.in. Rs 5,000 is released before delivery through the ASHA or ANM worker, and the balance Rs 20,000 is credited directly to the mother's bank account after the vaccination certificate is submitted.",
+        "body_hi": "आवेदन आंगनवाड़ी केंद्र या ब्लॉक विकास अधिकारी कार्यालय में जिला अधिकारी की स्वीकृति से होता है, या mksy.up.gov.in पर ऑनलाइन। प्रसव से पहले 5,000 रुपये ASHA/ANM के माध्यम से और टीकाकरण प्रमाण पत्र जमा करने पर 20,000 रुपये माता के बैंक खाते में जमा होते हैं।",
+        "source": "mksy.up.gov.in",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "mpy-pension",
+    "name": "Mukhyamantri Pension Yojana",
+    "name_hi": "मुख्यमंत्री पेंशन योजना",
+    "short_name": "Mukhyamantri Pension",
+    "category": "social-security",
+    "category_hi": "सामाजिक सुरक्षा",
+    "authority": "Government of Uttar Pradesh (Social Welfare / Women & Child Development)",
+    "state": "Uttar Pradesh",
+    "launched": "2017",
+    "summary": "Monthly pension of Rs 2,500 for old age (60+), Rs 2,500 for widows, Rs 2,500 for specially disabled persons and Rs 3,000 for destitute women, paid directly into the beneficiary's bank account.",
+    "summary_hi": "वृद्धावस्था (60+) 2,500 रुपये, विधवाएँ 2,500 रुपये, दिव्यांग 2,500 रुपये और निराश्रित महिलाएँ 3,000 रुपये प्रति माह पेंशन, सीधे लाभार्थी के बैंक खाते में।",
+    "amount": "Rs 2,500 per month (old age, widow, disabled) / Rs 3,000 per month (destitute women)",
+    "amounts": ["2500", "3000"],
+    "icon": "👵",
+    "tags": ["pension", "budhape", "vridha", "widow", "vidhwa", "disabled", "divyang", "garib", "niralib",
+             "maiya", "maa", "old age", "socsec"],
+    "sections": [
+      {
+        "id": "mpy-pension.eligibility",
+        "title": "Eligibility Criteria",
+        "title_hi": "पात्रता मानदंड",
+        "body": "Old age pension: any resident man or woman aged 60 years or above with no income from any source, or income below the prescribed ceiling. Widow pension: a widow aged 40 or above who has no income or income below the ceiling. Disability pension: a person with 40% or more disability certified by a medical authority. Destitute woman pension: a woman of any age without family support, having a husband, or a widow with no income.",
+        "body_hi": "वृद्धावस्था पेंशन: 60 वर्ष या अधिक आयु का कोई भी निवासी जिसकी कोई आय न हो या आय निर्धारित सीमा से कम हो। विधवा पेंशन: 40 वर्ष या अधिक आयु की विधवा जिसकी आय न हो या सीमा से कम हो। दिव्यांग पेंशन: 40% या अधिक दिव्यांगता प्रमाणित व्यक्ति। निराश्रित महिला पेंशन: बिना परिवार सहारे की महिला, जिसका पति है, या आयरहित विधवा।",
+        "eligibility": [
+          "Old age: age 60 or above, no income or income below the ceiling",
+          "Widow: age 40 or above, no income or income below the ceiling",
+          "Disability: 40% or more disability certified by a medical authority",
+          "Destitute woman: no family support, any age",
+          "Resident of Uttar Pradesh for at least the notified period"
+        ],
+        "eligibility_hi": [
+          "वृद्धावस्था: 60 वर्ष या अधिक, आय न हो या सीमा से कम",
+          "विधवा: 40 वर्ष या अधिक, आय न हो या सीमा से कम",
+          "दिव्यांग: 40% या अधिक दिव्यांगता चिकित्सा प्राधिकारी से प्रमाणित",
+          "निराश्रित महिला: बिना परिवार सहारे की, कोई भी आयु",
+          "निर्धारित अवधि तक उत्तर प्रदेश का निवासी"
+        ],
+        "documents": [
+          "Aadhaar card",
+          "Ration card / BPL card",
+          "Income certificate",
+          "Age proof (birth certificate, school certificate or voter ID)",
+          "Disability certificate (40% or above) from a medical authority",
+          "Death certificate of spouse (for widow pension)",
+          "Bank passbook linked with Aadhaar"
+        ],
+        "documents_hi": [
+          "आधार कार्ड",
+          "राशन कार्ड / बीपीएल कार्ड",
+          "आय प्रमाण पत्र",
+          "आयु साक्ष्य (जन्म प्रमाण पत्र, स्कूल प्रमाण पत्र या मतदाता पहचान पत्र)",
+          "चिकित्सा प्राधिकारी से 40% या अधिक दिव्यांगता प्रमाण पत्र",
+          "पति की मृत्यु प्रमाण पत्र (विधवा पेंशन हेतु)",
+          "आधार से जुड़ा बैंक पासबुक"
+        ],
+        "source": "socialwelfare.up.gov.in",
+        "page": 3
+      },
+      {
+        "id": "mpy-pension.apply",
+        "title": "Where to Apply",
+        "title_hi": "कहाँ आवेदन करें",
+        "body": "Apply at the Tehsil or Block Social Welfare Officer office, or the Block Development Officer office, or online through the UP Jan Seva Kendra portal. The District Social Welfare Officer approves the pension and the first instalment is credited within one month of approval.",
+        "body_hi": "तहसील या ब्लॉक सामाजिक कल्याण अधिकारी कार्यालय, ब्लॉक विकास अधिकारी कार्यालय, या UP जन सेवा केंद्र पोर्टल के माध्यम से ऑनलाइन आवेदन करें। जिला समाज कल्याण अधिकारी स्वीकृति देते हैं और पहली किस्त स्वीकृति के एक माह के भीतर जमा होती है।",
+        "source": "socialwelfare.up.gov.in",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "nfsa-ration",
+    "name": "National Food Security Act - Ration Card",
+    "name_hi": "राष्ट्रीय खाद्य सुरक्षा अधिनियम - राशन कार्ड",
+    "short_name": "Ration Card / NFSA",
+    "category": "food-security",
+    "category_hi": "खाद्य सुरक्षा",
+    "authority": "Department of Food and Public Distribution",
+    "state": "Uttar Pradesh",
+    "launched": "2014",
+    "summary": "Free foodgrains of 5 kg per person per month to Priority Households and 35 kg per household for Antyodaya Anna Yojana families, at 1 kg free for rice and 0.5 kg free for wheat per person per month in Uttar Pradesh.",
+    "summary_hi": "प्राथमिकता परिवार को प्रति व्यक्ति प्रति माह 5 किलो और अंतोदय अन्न योजना परिवार को 35 किलो मुफ़्त अनाज; उत्तर प्रदेश में प्रति व्यक्ति 1 किलो चावल और 0.5 किलो गेहूँ मुफ़्त।",
+    "amount": "5 kg per person per month (PH) and 35 kg per household (AAY); 1 kg rice and 0.5 kg wheat free",
+    "amounts": ["5", "35", "1", "0.5"],
+    "icon": "🌾",
+    "tags": ["ration", "rashan", "card", "ration card", "food", "grain", "anna", "foodgrain", "khaana", "subsidy"],
+    "sections": [
+      {
+        "id": "nfsa-ration.eligibility",
+        "title": "Eligibility Criteria",
+        "title_hi": "पात्रता मानदंड",
+        "body": "Priority Households (PH) cover about 75% of the rural and 50% of the urban population, identified by the State Government on the basis of income, land holding, and housing status criteria prescribed by the Central Government. Antyodaya Anna Yojana (AAY) households are those in need of special assistance - senior citizens above 60 years with no earning member, widows, disabled persons, and families headed by a woman.",
+        "body_hi": "प्राथमिकता परिवार (PH) ग्रामीण लगभग 75% और शहरी 50% आबादी को कवर करते हैं, राज्य सरकार द्वारा आय, भूमि और आवास स्थिति के आधार पर चिन्हित। अंतोदय अन्न योजना (AAY) में वे परिवार आते हैं जिन्हें विशेष सहायता चाहिए - 60 वर्ष से ऊपर के वरिष्ठ निरपेक्ष, विधवाएँ, दिव्यांग जन और महिला-मुख्य परिवार।",
+        "eligibility": [
+          "Inclusion in the State Priority Household list for food security",
+          "Inclusion in the Antyodaya Anna Yojana list for vulnerable households",
+          "Aadhaar or any state-issued identity document",
+          "Bank or post office account linked with Aadhaar for direct benefit transfer",
+          "Entitlement of 5 kg per person per month for PH and 35 kg per household for AAY"
+        ],
+        "eligibility_hi": [
+          "राज्य की प्राथमिकता परिवार सूची में शामिल",
+          "अंतोदय अन्न योजना सूची में शामिल",
+          "आधार या राज्य द्वारा जारी पहचान पत्र",
+          "आधार से जुड़ा बैंक या डाकघर खाता (DBT हेतु)",
+          "PH हेतु प्रति व्यक्ति 5 किलो प्रति माह और AAY हेतु 35 किलो प्रति परिवार"
+        ],
+        "documents": [
+          "Aadhaar card of family members",
+          "Ration card / State food security card",
+          "Bank passbook linked with Aadhaar",
+          "Income certificate or BPL card",
+          "Mobile number for SMS alerts on grain distribution"
+        ],
+        "documents_hi": [
+          "परिवार के सदस्यों के आधार कार्ड",
+          "राशन कार्ड / राज्य खाद्य सुरक्षा कार्ड",
+          "आधार से जुड़ा बैंक पासबुक",
+          "आय प्रमाण पत्र या बीपीएल कार्ड",
+          "अनाज वितरण SMS हेतु मोबाइल नंबर"
+        ],
+        "source": "dfpd.gov.in",
+        "page": 5
+      },
+      {
+        "id": "nfsa-ration.up",
+        "title": "Uttar Pradesh Specific Rules",
+        "title_hi": "उत्तर प्रदेश विशेष नियम",
+        "body": "In Uttar Pradesh the State Government has declared foodgrains free for all ration card holders: 1 kg free rice and 0.5 kg free wheat per person per month, plus the regular entitlement under NFSA. Fair Price Shops are required to record every transaction in the e-POS system and display the stock board at the shop. Grievances about shops can be made on the State Food Supply Department's helpline.",
+        "body_hi": "उत्तर प्रदेश में सभी राशन कार्डधारकों के लिए अनाज मुफ़्त घोषित है - प्रति व्यक्ति 1 किलो चावल और 0.5 किलो गेहूँ, साथ ही NFSA की सामान्य राशि। दुकान पर हर लेन-देन e-POS में दर्ज होना और स्टॉक बोर्ड लगाना अनिवार्य है। शिकायत राज्य खाद्य आपूर्ति विभाग की हेल्पलाइन पर की जा सकती है।",
+        "source": "upfc.gov.in",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "id": "pmfby",
+    "name": "Pradhan Mantri Fasal Bima Yojana",
+    "name_hi": "प्रधानमंत्री फसल बीमा योजना",
+    "short_name": "PMFBY",
+    "category": "agriculture",
+    "category_hi": "कृषि",
+    "authority": "Ministry of Agriculture",
+    "state": "All India, including Uttar Pradesh",
+    "launched": "2016",
+    "summary": "Crop insurance against natural calamities, pests and disease with the farmer paying only 2% of the sum insured for kharif, 1.5% for rabi and 5% for commercial or horticultural crops.",
+    "summary_hi": "प्राकृतिक आपदा, कीट और रोग से फसल बीमा - किसान को सिर्फ 2% (खरीफ), 1.5% (रबी) या 5% (व्यापारिक/बागवानी) प्रीमियम देना होता है, बाकी केंद्र और राज्य सरकार देती हैं।",
+    "amount": "Farmer premium: 2% of sum insured for kharif, 1.5% for rabi, 5% for commercial and horticultural crops",
+    "amounts": ["2", "1.5", "5"],
+    "icon": "🌧️",
+    "tags": ["bima", "insurance", "fasal", "fasal bima", "crop insurance", "kisan", "baarish", "drya"],
+    "sections": [
+      {
+        "id": "pmfby.eligibility",
+        "title": "Eligibility Criteria",
+        "title_hi": "पात्रता मानदंड",
+        "body": "All farmers growing notified crops in notified areas, including sharecroppers and tenant farmers, are eligible. The scheme is mandatory for farmers taking a crop loan from a commercial bank, Kisan Credit Card or a cooperative bank. For loans up to Rs 2 lakh the claim is settled through the Crop Insurance Portal using the bank loan record.",
+        "body_hi": "अधिसूचित क्षेत्रों में अधिसूचित फसल उगाने वाले सभी किसान पात्र हैं, बटाईदार और काश्तकार सहित। योजना उन किसानों के लिए अनिवार्य है जो बैंक, किसान क्रेडिट कार्ड या सहकारी बैंक से फसल ऋण लेते हैं। 2 लाख तक के ऋण पर दावा क्रॉप इंश्योरेंस पोर्टल से बैंक ऋण रिकॉर्ड के आधार पर निपटा जाता है।",
+        "eligibility": [
+          "Farmer growing notified crops in a notified area",
+          "Sharecroppers and tenant farmers are included",
+          "Compulsory for farmers availing a crop loan from a bank or KCC",
+          "Loans up to Rs 2 lakh are settled through the Crop Insurance Portal"
+        ],
+        "eligibility_hi": [
+          "अधिसूचित क्षेत्र में अधिसूचित फसल उगाने वाला किसान",
+          "बटाईदार और काश्तकार शामिल",
+          "बैंक या KCC से फसल ऋण लेने वाले किसानों के लिए अनिवार्य",
+          "2 लाख तक के ऋण का दावा क्रॉप इंश्योरेंस पोर्टल से निपटान"
+        ],
+        "documents": [
+          "Aadhaar card",
+          "Land records / tenancy agreement",
+          "Bank passbook linked with Aadhaar",
+          "Sowing certificate (for crop loans)",
+          "Mobile number for claim intimation"
+        ],
+        "documents_hi": [
+          "आधार कार्ड",
+          "भूमि रिकॉर्ड / पट्टा समझौता",
+          "आधार से जुड़ा बैंक पासबुक",
+          "बुवाई प्रमाण पत्र (फसल ऋण हेतु)",
+          "दावा सूचना हेतु मोबाइल नंबर"
+        ],
+        "source": "pmfby.gov.in",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "up-bhulekh",
+    "name": "UP Bhulekh - Land Record & Khasra Verification",
+    "name_hi": "यूपी भूलेख - भूमि रिकॉर्ड सत्यापन",
+    "short_name": "UP Bhulekh",
+    "category": "land-records",
+    "category_hi": "भूमि रिकॉर्ड",
+    "authority": "Department of Revenue, Government of Uttar Pradesh",
+    "state": "Uttar Pradesh",
+    "launched": "2015",
+    "summary": "Free online access to the Khasra and Khatauni of any land parcel in Uttar Pradesh, including the six-step Chaurasi (छह सीढ़ी) boundary certificate, mutation status and jamabandi record.",
+    "summary_hi": "उत्तर प्रदेश की किसी भी जमीन का खसरा-खतौनी, छह सीढ़ी चौहद्दी प्रमाण पत्र, नामांतरण स्थिति और जमाबंदी मुफ़्त ऑनलाइन उपलब्ध।",
+    "amount": "Free service - Rs 0 (a nominal fee applies for a certified copy at the Tehsil office)",
+    "amounts": ["0"],
+    "icon": "📋",
+    "tags": ["bhulekh", "khatauni", "khasra", "khasra khatauni", "zameen", "land", "record", "chaurasi", "six step", "mutation", "namantaran"],
+    "sections": [
+      {
+        "id": "up-bhulekh.lookup",
+        "title": "How to Check Your Land Record",
+        "title_hi": "अपनी भूमि रिकॉर्ड कैसे जाँचें",
+        "body": "Go to upbhulekh.gov.in, click 'खाता खोजें' (Find Account), select the district, block and village, then search by 'खाता संख्या' (account number), 'खाता नाम' (name), 'सर्वे नंबर' (survey number) or 'मोबाइल नंबर'. The Khatauni details, Jamabandi amount, and the six-step Chaurasi certificate can be downloaded free of cost. Mutation (नामांतरण) applications are also made from the same portal.",
+        "body_hi": "upbhulekh.gov.in पर जाएं, 'खाता खोजें' पर क्लिक करें, जिला, ब्लॉक और गांव चुनें, फिर 'खाता संख्या', 'खाता नाम', 'सर्वे नंबर' या 'मोबाइल नंबर' से खोजें। खतौनी का विवरण, जमाबंदी राशि और छह सीढ़ी चौहद्दी प्रमाण पत्र मुफ़्त डाउनलोड किया जा सकता है। नामांतरण आवेदन भी इसी पोर्टल से होते हैं।",
+        "eligibility": [
+          "Any citizen holding a Jamabandi number in Uttar Pradesh",
+          "Search possible by account number, name, survey number or registered mobile",
+          "Land record details are public information and free to view",
+          "For a certified copy, apply at the Tehsil office"
+        ],
+        "eligibility_hi": [
+          "उत्तर प्रदेश में जमाबंदी नंबर वाला कोई भी नागरिक",
+          "खाता संख्या, नाम, सर्वे नंबर या पंजीकृत मोबाइल से खोज संभव",
+          "भूमि रिकॉर्ड सार्वजनिक जानकारी है, मुफ़्त देखा जा सकता है",
+          "प्रमाणित प्रति हेतु तहसील कार्यालय में आवेदन"
+        ],
+        "documents": [
+          "Jamabandi / Khata number (जमाबंदी नंबर)",
+          "Aadhaar card",
+          "Registered mobile number",
+          "Passport size photograph (for certified copy)"
+        ],
+        "documents_hi": [
+          "जमाबंदी / खाता संख्या",
+          "आधार कार्ड",
+          "पंजीकृत मोबाइल नंबर",
+          "पासपोर्ट साइज फोटोग्राफ (प्रमाणित प्रति हेतु)"
+        ],
+        "source": "upbhulekh.gov.in",
+        "page": 1
+      }
+    ]
+  }
+]
