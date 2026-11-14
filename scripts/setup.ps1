@@ -1,102 +1,107 @@
 <#
 .SYNOPSIS
-    One-command provisioning for JanVaani UP.
+    Provision a clean development environment for JanVaani UP.
 
 .DESCRIPTION
-    Creates the Python virtualenv, installs backend + frontend dependencies,
-    seeds the SQLite database and regenerates the PWA icons. Safe to re-run.
+    Creates the Python virtual environment, installs the backend dependencies,
+    installs the frontend npm packages, generates the PWA icons and seeds the
+    SQLite database. Safe to run repeatedly.
 
 .EXAMPLE
     .\scripts\setup.ps1
+    .\scripts\setup.ps1 -SkipFrontend
 #>
-
 [CmdletBinding()]
 param(
+    [switch]$SkipBackend,
     [switch]$SkipFrontend,
     [switch]$Force
 )
 
 $ErrorActionPreference = "Stop"
-$root = Split-Path -Parent $PSScriptRoot
-Set-Location $root
+$Root = Split-Path -Parent $PSScriptRoot
+Set-Location $Root
 
-Write-Host ""
-Write-Host "  JanVaani UP - setup" -ForegroundColor Cyan
-Write-Host "  ====================" -ForegroundColor Cyan
-Write-Host ""
-
-# --- 1. Python virtualenv ----------------------------------------------------
-$venv = Join-Path $root ".venv"
-$python = Join-Path $venv "Scripts\python.exe"
-
-if ($Force -and (Test-Path $venv)) {
-    Write-Host "  [!] Removing existing virtualenv" -ForegroundColor Yellow
-    Remove-Item -Recurse -Force $venv
+function Write-Step($message) {
+    Write-Host "`n==> $message" -ForegroundColor Cyan
 }
 
-if (-not (Test-Path $python)) {
-    Write-Host "  [1/4] Creating virtualenv..." -ForegroundColor Cyan
-    $created = $false
-    foreach ($launcher in @("py", "python", "python3")) {
-        if (Get-Command $launcher -ErrorAction SilentlyContinue) {
-            & $launcher -m venv $venv
-            if ($LASTEXITCODE -eq 0 -and (Test-Path $python)) { $created = $true; break }
-        }
+function Write-Ok($message) {
+    Write-Host "    [OK] $message" -ForegroundColor Green
+}
+
+# --- 1. Python virtual environment ------------------------------------------
+if (-not $SkipBackend) {
+    Write-Step "Python environment"
+
+    $venv = Join-Path $Root ".venv"
+    $python = Join-Path $venv "Scripts\python.exe"
+
+    if ($Force -and (Test-Path $venv)) {
+        Write-Host "    removing existing .venv"
+        Remove-Item $venv -Recurse -Force
     }
-    if (-not $created) {
-        Write-Host "  [X] Could not create a virtualenv. Install Python 3.12+ and retry." -ForegroundColor Red
-        exit 1
-    }
-} else {
-    Write-Host "  [1/4] Virtualenv already present" -ForegroundColor DarkGray
-}
 
-Write-Host "  [2/4] Installing backend dependencies..." -ForegroundColor Cyan
-& $python -m pip install --upgrade pip --quiet
-& $python -m pip install -r (Join-Path $root "backend\requirements.txt") --quiet
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "  [X] Backend dependency installation failed" -ForegroundColor Red
-    exit 1
-}
-
-# --- 2. Frontend dependencies -------------------------------------------------
-if (-not $SkipFrontend) {
-    Write-Host "  [3/4] Installing frontend dependencies..." -ForegroundColor Cyan
-    Push-Location (Join-Path $root "frontend")
-    try {
-        if (Get-Command npm -ErrorAction SilentlyContinue) {
-            npm install --no-audit --no-fund --silent
-            if ($LASTEXITCODE -ne 0) {
-                Write-Host "  [X] npm install failed" -ForegroundColor Red
-                exit 1
-            }
+    if (-not (Test-Path $python)) {
+        # `python` is a Windows Store stub on many machines - prefer the launcher.
+        $launcher = Get-Command py -ErrorAction SilentlyContinue
+        if ($launcher) {
+            Write-Host "    creating venv with 'py -m venv'"
+            & py -m venv $venv
         } else {
-            Write-Host "  [!] npm not found - skipping the frontend" -ForegroundColor Yellow
+            Write-Host "    creating venv with 'python -m venv'"
+            & python -m venv $venv
         }
+    } else {
+        Write-Host "    venv already present"
+    }
+
+    if (-not (Test-Path $python)) {
+        throw "Could not create the virtual environment. Install Python 3.11+ and re-run."
+    }
+    Write-Ok "venv ready at .venv"
+
+    Write-Step "Backend dependencies"
+    & $python -m pip install --upgrade pip --quiet
+    & $python -m pip install -r (Join-Path $Root "backend\requirements.txt")
+    if ($LASTEXITCODE -ne 0) { throw "pip install failed" }
+    Write-Ok "backend requirements installed"
+
+    Write-Step "Database seed"
+    & $python -c "import sys; sys.path.insert(0, r'backend'); from app.db.database import get_db; from app.db.seed import seed; print(seed(get_db()))"
+    if ($LASTEXITCODE -ne 0) { throw "seeding failed" }
+    Write-Ok "database seeded"
+}
+
+# --- 2. Frontend -------------------------------------------------------------
+if (-not $SkipFrontend) {
+    Write-Step "Frontend dependencies"
+    Push-Location (Join-Path $Root "frontend")
+    try {
+        if (-not (Test-Path "package.json")) { throw "frontend/package.json is missing" }
+        npm install --no-audit --no-fund
+        if ($LASTEXITCODE -ne 0) { throw "npm install failed" }
+        Write-Ok "npm packages installed"
     } finally {
         Pop-Location
     }
+
+    Write-Step "PWA icons"
+    & $python (Join-Path $Root "scripts\make_icons.py")
+    if ($LASTEXITCODE -ne 0) { throw "icon generation failed" }
+    Write-Ok "icons generated in frontend/public"
+}
+
+# --- 3. .env -----------------------------------------------------------------
+Write-Step "Environment file"
+$envFile = Join-Path $Root ".env"
+if (-not (Test-Path $envFile)) {
+    Copy-Item (Join-Path $Root ".env.example") $envFile
+    Write-Ok ".env created from .env.example"
 } else {
-    Write-Host "  [3/4] Skipping frontend" -ForegroundColor DarkGray
+    Write-Host "    .env already exists - leaving it untouched"
 }
 
-# --- 3. Seed the database -----------------------------------------------------
-Write-Host "  [4/4] Seeding database and generating icons..." -ForegroundColor Cyan
-Push-Location $root
-try {
-    & $python -c "import sys; sys.path.insert(0, 'backend'); from app.db.database import get_db; from app.db.seed import seed; print('  seeded:', seed(get_db()))"
-    & $python (Join-Path $root "scripts\make_icons.py")
-} finally {
-    Pop-Location
-}
-
-Write-Host ""
-Write-Host "  Setup complete." -ForegroundColor Green
-Write-Host ""
-Write-Host "  Next:  .\scripts\dev.ps1" -ForegroundColor Cyan
-Write-Host "    Citizen app   ->  http://localhost:5173"
-Write-Host "    Officer view  ->  http://localhost:5173/admin"
-Write-Host "    API docs      ->  http://127.0.0.1:8000/docs"
-Write-Host ""
-Write-Host "  Optional: copy .env.example to .env and add GROQ_API_KEY for live LLM + Whisper."
-Write-Host ""
+Write-Host "`n==> Setup complete" -ForegroundColor Green
+Write-Host "    Start both servers with:  .\scripts\dev.ps1" -ForegroundColor Green
+Write-Host "    Add a GROQ_API_KEY to .env to enable the live LLM + Whisper." -ForegroundColor DarkGray

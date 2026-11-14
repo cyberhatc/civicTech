@@ -110,6 +110,66 @@ def expand_query(query: str) -> str:
     return f"{query} {' '.join(extra)}"
 
 
+# Which kind of section best answers which kind of question.
+_SECTION_AFFINITY: dict[str, tuple[str, ...]] = {
+    "eligibility": (
+        "eligible", "eligibility", "patra", "patrata", "योग्य", "पात्र",
+        "laharthi", "लाभार्थी", "who can", "milega", "मिलेगा", "मिलेगी", "मिलेगे",
+        "pata", "कौन", "क्या", "yojana", "योजना", "scheme", "पात्रता",
+    ),
+    "application": (
+        "apply", "how to", "आवेदन", "kaise", "process", "प्रक्रिया", "kahan se",
+        "कहाँ", "form", "फॉर्म", "register", "form bhare",
+    ),
+    "exclusions": ("not eligible", "अपात्र", "exclude", "नहीं पात्र", "नहीं है"),
+    "interest": ("interest", "ब्याज", "repay", "वापसी", "rate", "दर"),
+    "benefits": ("benefit", "लाभ", "assist", "सहायता", "converge", "योजना"),
+    "lookup": ("check", "खोज", "भूलेख", "khatauni", "download", "डाउनलोड", "record"),
+    "process": ("apply", "आवेदन", "process", "प्रक्रिया", "where", "कहाँ"),
+}
+
+# Which section type the *intent* of the conversation needs.
+_INTENT_AFFINITY: dict[str, dict[str, float]] = {
+    "scheme_eligibility": {"eligibility": 1.0},
+    "scheme_documents": {"eligibility": 0.8},
+    "scheme_list": {"eligibility": 0.4},
+}
+
+
+def section_affinity(query: str, chunk: Chunk, intent_name: str | None = None) -> float:
+    """How well this chunk's section type matches the kind of question asked."""
+    lowered = (query or "").lower()
+    kind = chunk.section_id.split(".")[-1]
+
+    score = 0.0
+    keywords = _SECTION_AFFINITY.get(kind, ())
+    if keywords:
+        hits = sum(1 for keyword in keywords if keyword in lowered)
+        score += min(0.6, hits * 0.2)
+
+    if intent_name:
+        score += _INTENT_AFFINITY.get(intent_name, {}).get(kind, 0.0)
+
+    return min(2.0, score)
+
+
+def rerank_by_intent(
+    query: str, ranked: list[tuple[Chunk, float]], intent_name: str | None = None
+) -> list[tuple[Chunk, float]]:
+    """Re-order retrieved chunks so the right *kind* of section answers first.
+
+    Pure similarity loves long, keyword-dense sections - which is often the
+    "who is not eligible" paragraph. A citizen asking "am I eligible?" must get
+    the criteria, not the exclusions.
+    """
+    if not ranked:
+        return ranked
+    return sorted(
+        ranked,
+        key=lambda item: (-section_affinity(query, item[0], intent_name), -item[1]),
+    )
+
+
 @dataclass
 class Chunk:
     """One retrievable unit of scheme knowledge."""

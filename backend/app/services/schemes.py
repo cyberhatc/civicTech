@@ -49,27 +49,29 @@ def _offline_answer(query: str, chunks: list[rag.Chunk], intent_entities: dict[s
         )
 
     top = chunks[0]
+    # The criteria may live in a different section than the best-scoring one.
+    criteria = next((chunk for chunk in chunks if chunk.eligibility_hi), None)
+    docs_chunk = next((chunk for chunk in chunks if chunk.documents_hi), top)
     bigha = intent_entities.get("landBigha")
 
     parts: list[str] = []
     if top.scheme_id == "pm-kisan" and bigha:
-        parts.append(f"आपके {bigha} बीघा जमीन के लिए सबसे उपयुक्त योजना {top.scheme_name_hi} ({top.short_name}) है।")
+        parts.append(f"आपके {bigha:g} बीघा जमीन के लिए सबसे उपयुक्त योजना {top.scheme_name_hi} ({top.short_name}) है।")
     else:
         parts.append(f"आपके सवाल के लिए सबसे उपयुक्त योजना {top.scheme_name_hi} ({top.short_name}) है।")
 
-    if top.eligibility_hi:
-        parts.append("मुख्य पात्रता शर्तें: " + "; ".join(top.eligibility_hi[:3]) + "।")
+    if criteria and criteria.eligibility_hi:
+        parts.append("मुख्य पात्रता शर्तें: " + "; ".join(criteria.eligibility_hi[:3]) + "।")
     elif top.body_hi:
         parts.append(top.body_hi)
 
-    if intent_entities.get("asksDocuments") or True:
-        docs = top.documents_hi[:3]
-        if docs:
-            parts.append("ज़रूरी दस्तावेज़: " + "; ".join(docs) + "।")
+    docs = docs_chunk.documents_hi[:3]
+    if docs:
+        parts.append("ज़रूरी दस्तावेज़: " + "; ".join(docs) + "।")
 
     extra = [c for c in chunks[1:] if c.scheme_id != top.scheme_id][:2]
     if extra:
-        names = ", ".join({c.short_name for c in extra})
+        names = ", ".join(dict.fromkeys(c.short_name for c in extra))
         parts.append(f"इसके अलावा आप {names} के लिए भी पात्र हो सकते हैं।")
 
     parts.append(f"पूरी जानकारी का स्रोत: {top.source}।")
@@ -77,10 +79,12 @@ def _offline_answer(query: str, chunks: list[rag.Chunk], intent_entities: dict[s
     hindi = " ".join(parts)
 
     english_parts = [f"Best match: {top.scheme_name} ({top.short_name})."]
-    if top.eligibility:
-        english_parts.append("Key criteria: " + "; ".join(top.eligibility[:3]) + ".")
-    if top.documents:
-        english_parts.append("Documents: " + "; ".join(top.documents[:3]) + ".")
+    if criteria and criteria.eligibility:
+        english_parts.append("Key criteria: " + "; ".join(criteria.eligibility[:3]) + ".")
+    elif top.body:
+        english_parts.append(top.body)
+    if docs_chunk.documents:
+        english_parts.append("Documents: " + "; ".join(docs_chunk.documents[:3]) + ".")
     english = " ".join(english_parts)
 
     return hindi, english
@@ -137,6 +141,7 @@ def answer_question(
     query: str,
     *,
     intent_entities: dict[str, Any] | None = None,
+    intent_name: str | None = None,
     top_k: int = 3,
     scheme_filter: str | None = None,
 ) -> dict[str, Any]:
@@ -151,6 +156,7 @@ def answer_question(
     if not ranked:
         # Broaden the search - drop to the whole corpus.
         ranked = rag.get_retriever().search(query, top_k=5)
+    ranked = rag.rerank_by_intent(query, ranked, intent_name)
     chunks = [chunk for chunk, _ in ranked]
     scores = {chunk.scheme_id: score for chunk, score in ranked}
 

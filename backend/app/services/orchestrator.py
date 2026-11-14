@@ -156,7 +156,7 @@ def _handle_scheme_question(intent: nlu.Intent) -> dict[str, Any]:
     query = intent.raw_text
     scheme_id = schemes.resolve_scheme_name(query)
     result = schemes.answer_question(
-        query, intent_entities=intent.entities, top_k=3, scheme_filter=scheme_id
+        query, intent_entities=intent.entities, intent_name=intent.name, top_k=3, scheme_filter=scheme_id
     )
     card = schemes.scheme_card(scheme_id) if scheme_id else None
     return {

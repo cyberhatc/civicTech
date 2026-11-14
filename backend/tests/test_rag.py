@@ -83,3 +83,27 @@ def test_tokenizer_keeps_devanagari():
 def test_light_stem_does_not_destroy_short_tokens():
     assert rag.light_stem("aad") == "aad"
     assert len(rag.light_stem("yojana")) >= 3
+
+
+def test_eligibility_question_ranks_the_criteria_section_first():
+    """A citizen asking "am I eligible?" must not get the exclusions paragraph."""
+    ranked = rag.get_retriever().search("kaun sa yojana milegi mujhe", top_k=4)
+    reranked = rag.rerank_by_intent("kaun sa yojana milegi mujhe", ranked, "scheme_eligibility")
+    assert reranked
+    assert reranked[0][0].section_id.endswith("eligibility")
+
+
+def test_rerank_is_stable_for_queries_without_an_intent():
+    ranked = rag.get_retriever().search("kisan bigha zameen", top_k=3)
+    reranked = rag.rerank_by_intent("kisan bigha zameen", ranked, None)
+    assert [chunk.chunk_id for chunk, _ in reranked] == [chunk.chunk_id for chunk, _ in ranked]
+
+
+def test_rerank_handles_an_empty_result_set():
+    assert rag.rerank_by_intent("anything", [], "scheme_eligibility") == []
+
+
+def test_section_affinity_prefers_the_matching_section_type():
+    chunks = {chunk.section_id.split(".")[-1]: chunk for chunk in rag.get_retriever().chunks}
+    assert rag.section_affinity("kaun si yojana milegi", chunks["eligibility"], "scheme_eligibility") > 0
+    assert rag.section_affinity("kaun si yojana milegi", chunks["interest"], "scheme_eligibility") == 0

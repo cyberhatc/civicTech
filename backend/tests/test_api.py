@@ -61,6 +61,16 @@ def test_chat_scheme_eligibility(client):
     assert data["intent"]["entities"]["landBigha"] == 2
     assert data["reply"]["text"]
     assert data["citations"]
+    # The top citation must be the eligibility criteria, not the exclusions.
+    assert data["citations"][0]["sectionId"].endswith("eligibility")
+
+
+def test_chat_answer_states_the_eligibility_criteria(client):
+    response = client.post(
+        "/api/chat/text", json={"text": "kaun sa yojana milegi mujhe", "speak": False}
+    )
+    reply = response.json()["data"]["reply"]["text"]
+    assert "पात्रता" in reply or "eligible" in reply.lower()
 
 
 def test_chat_greeting(client):
