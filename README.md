@@ -372,6 +372,13 @@ a transcript containing prompt-injection patterns is rejected outright.
 API, so the demo always talks — the "Offline" badge tells the truth about which
 engine is running.
 
+**Why is the officer dashboard code-split?**
+The citizen app and the DM dashboard have nothing in common except a router. The
+dashboard pulls in Recharts (~450 kB), so it is loaded with `React.lazy` only when
+someone opens `/admin`. The citizen bundle drops from **746 kB to 292 kB**
+(214 kB → 92 kB gzipped) — the difference between a page that loads on a rural 3G
+connection and one that does not.
+
 **Why a combined "location" slot?**
 Citizens say "Tanda block, Bansipur gaon" in one breath, not one field at a time. The
 slot filler accepts a village **or** a block, and if the answer does not match the
